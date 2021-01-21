@@ -27,13 +27,11 @@ void print_how(int how) {
 }
 
 void print_r(unsigned short r) {
-
     printf("0x%04x ", (unsigned)r);
     if ((r & POLLIN) != 0) printf("POLLIN | ");
     if ((r & POLLOUT) != 0) printf("POLLOUT | ");
     if ((r & POLLPRI) != 0) printf("POLLPRI | ");
     if ((r & POLLERR) != 0) printf("POLLERR | ");
-    if ((r & POLLIN) != 0) printf("POLLIN | ");
     if ((r & POLLHUP) != 0) printf("POLLHUP | ");
     if ((r & POLLRDNORM) != 0) printf("POLLRDNORM| ");
     if ((r & POLLRDBAND) != 0) printf("POLLRDBAND | ");
@@ -41,7 +39,6 @@ void print_r(unsigned short r) {
     if ((r & POLLWRBAND) != 0) printf("POLLWRBAND | ");
     if ((r & POLLMSG) != 0) printf("POLLMSG | ");
     if ((r & POLLRDHUP) != 0) printf("POLLRDHUP | ");
-    
 }
 
 int sd_poll(int c_how, int r_how)
